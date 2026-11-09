@@ -8,7 +8,7 @@ import {DashboardMetrics} from './DashboardMetrics.jsx';
 import {extractTechnologies} from './technologies.js';
 import {ProfileAnalytics, ProfileSelect} from './ProfileAnalytics.jsx';
 import {memberGroups} from './profile-analytics.js';
-const API=import.meta.env.DEV?'':(import.meta.env.VITE_API_URL||'http://localhost:4000');
+const API=import.meta.env.DEV?'':(import.meta.env.VITE_API_URL||'https://jobtrack-server.onrender.com/');
 const SESSION_KEY='jobtrack-session';
 function readSession(){try{const raw=localStorage.getItem(SESSION_KEY);return raw?JSON.parse(raw):null}catch{return null}}
 function writeSession(session){if(session)localStorage.setItem(SESSION_KEY,JSON.stringify(session));else localStorage.removeItem(SESSION_KEY)}
